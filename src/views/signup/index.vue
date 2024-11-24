@@ -5,7 +5,7 @@
         <div class="container" style="font-family: 'Arial', sans-serif">
           <div class="form-container mx-auto">
             <!-- Title -->
-            <h2 class="text-center fw-bold mt-5">Creat Account</h2>
+            <h2 class="text-center fw-bold mt-5">Create Account</h2>
             <p class="text-center welcome-text">
               Fill your information below or register with your social account
             </p>
@@ -211,6 +211,7 @@ label {
   transform: translateY(-50%);
   cursor: pointer;
   color: #010101;
+  display: block;
 }
 /* Button */
 .btn-primary {

@@ -39,7 +39,12 @@
 
               <!-- Forgot Password Link -->
               <div class="text-end">
-                <a href="#" class="forgot-password-link">Forgot Password?</a>
+                <a
+                  :button="true"
+                  @click="password()"
+                  class="forgot-password-link"
+                  >Forgot Password?</a
+                >
               </div>
 
               <!-- Sign In Button -->
@@ -109,6 +114,9 @@ export default defineComponent({
     async signup() {
       this.$router.push('signup');
     },
+    async password() {
+      this.$router.push('password');
+    },
   },
 });
 </script>
@@ -163,7 +171,8 @@ h2 {
   top: 45%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #010101; /* Optional: Default gray color */
+  color: #010101;
+  display: block;
 }
 /* Button */
 .btn-primary {
