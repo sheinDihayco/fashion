@@ -5,13 +5,23 @@
         <div class="container" style="font-family: 'Arial', sans-serif">
           <div class="form-container mx-auto">
             <!-- Title -->
-            <h2 class="text-center fw-bold">Sign In</h2>
+            <h2 class="text-center fw-bold mt-5">Creat Account</h2>
             <p class="text-center welcome-text">
-              Hi! Welcome back, you've been missed
+              Fill your information below or register with your social account
             </p>
 
             <!-- Form -->
             <form>
+              <!-- Name Input -->
+              <div class="mb-4">
+                <label class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
               <!-- Email Input -->
               <div class="mb-4">
                 <label class="form-label">Email</label>
@@ -36,10 +46,11 @@
                 </div>
                 <i class="bi bi-eye-slash toggle-password"></i>
               </div>
-
-              <!-- Forgot Password Link -->
-              <div class="text-end">
-                <a href="#" class="forgot-password-link">Forgot Password?</a>
+              <div class="check">
+                <label>
+                  <input type="checkbox" />
+                  Agree with <span class="checkbox">Terms & Conditions</span>
+                </label>
               </div>
 
               <!-- Sign In Button -->
@@ -81,9 +92,9 @@
 
               <!-- Sign Up Link -->
               <p class="text-center mt-4">
-                Don't have an account?
-                <a :button="true" @click="signup()" class="sign-up-link"
-                  >Sign Up</a
+                Already have an account?
+                <a :button="true" @click="signin()" class="sign-up-link"
+                  >Sign In</a
                 >
               </p>
             </form>
@@ -99,21 +110,25 @@ import { defineComponent } from 'vue';
 import { IonPage, IonContent, IonRouterOutlet } from '@ionic/vue';
 
 export default defineComponent({
-  name: 'SignInScreen',
+  name: 'SignUpScreen',
   components: {
     IonPage,
     IonContent,
     IonRouterOutlet,
   },
   methods: {
-    async signup() {
-      this.$router.push('signup');
+    async signin() {
+      this.$router.push('signin');
     },
   },
 });
 </script>
 
 <style scoped>
+.container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
 .brand-name {
   font-size: 1.5rem;
   font-weight: 600;
@@ -130,19 +145,51 @@ h2 {
   margin-bottom: 2rem;
   font-size: 1rem;
 }
-.forgot-password-link,
-.sign-up-link {
+.sign-up-link,
+.checkbox {
   color: #6c3f24;
   font-weight: 600;
   text-decoration: none;
   text-decoration: underline;
 }
-.forgot-password-link:hover,
+
 .sign-up-link:hover {
   text-decoration: underline;
 }
+input[type='checkbox'] {
+  appearance: none; /* Remove default checkbox style */
+  width: 25px;
+  height: 25px;
+  border: 2px solid #6c3f24; /* Default border color */
+  border-radius: 4px; /* Optional: rounded corners */
+  cursor: pointer;
+  margin-right: 10px;
+}
 
-/* Form Elements */
+input[type='checkbox'] {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type='checkbox']:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #6c3f24;
+  border-color: #6c3f24;
+}
+label {
+  font-size: 18px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
 .form-label {
   font-size: 0.9rem;
   color: #6d4c41;
@@ -160,10 +207,10 @@ h2 {
 .toggle-password {
   position: absolute;
   right: 50px;
-  top: 45%;
+  top: 56%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #010101; /* Optional: Default gray color */
+  color: #010101;
 }
 /* Button */
 .btn-primary {

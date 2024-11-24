@@ -1,42 +1,49 @@
 <template>
   <ion-page>
     <ion-content :fullscreen="true">
-      <div class="welcome">
-        <!-- Image Section -->
-        <div class="image-grid">
-          <div class="image-left">
-            <img
-              class="main-image"
-              src="https://img.freepik.com/free-photo/beautiful-lady-trench-coat-black-shoes-heels-standing-dreamily-looking-aside_574295-5627.jpg"
-              alt=""
-            />
-          </div>
-          <div class="image-right">
-            <img
-              class="circle-image-1"
-              src="https://mdsassets.emaarmalls.com/mds/uploads/store/mainPicture/63c79bf9d2756.jpg"
-              alt=""
-            />
-            <img class="circle-image" src="../../../image/image.png" alt="" />
+      <section class="vh-100 d-flex align-items-center justify-content-center">
+        <div class="container" style="font-family: 'Arial', sans-serif">
+          <div class="form-container mx-auto"></div>
+          <div class="welcome">
+            <!-- Image Section -->
+            <div class="image-grid">
+              <div class="image-left">
+                <img
+                  class="main-image"
+                  src="https://img.freepik.com/free-photo/beautiful-lady-trench-coat-black-shoes-heels-standing-dreamily-looking-aside_574295-5627.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="image-right">
+                <img
+                  class="circle-image-1"
+                  src="https://mdsassets.emaarmalls.com/mds/uploads/store/mainPicture/63c79bf9d2756.jpg"
+                  alt=""
+                />
+                <img class="circle-image" src="../../image/image.png" alt="" />
+              </div>
+            </div>
+            <!-- Text Section -->
+            <div class="content">
+              <h1 class="title">
+                The <span class="highlight">Fashion App</span> That Makes You
+                Look Your Best
+              </h1>
+              <p class="subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt.
+              </p>
+              <button class="button">Let's Get Started</button>
+              <p class="signin">
+                Already have an account?
+                <a :button="true" @click="signin()" class="signin-link"
+                  >Sign In</a
+                >
+              </p>
+            </div>
           </div>
         </div>
-        <!-- Text Section -->
-        <div class="content">
-          <h1 class="title">
-            The <span class="highlight">Fashion App</span> That Makes You Look
-            Your Best
-          </h1>
-          <p class="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-          </p>
-          <button class="button">Let's Get Started</button>
-          <p class="signin">
-            Already have an account?
-            <a :button="true" @click="signin()" class="signin-link">Sign In</a>
-          </p>
-        </div>
-      </div>
+      </section>
     </ion-content>
   </ion-page>
 </template>
@@ -62,7 +69,7 @@ export default defineComponent({
 
 <style scoped>
 .welcome {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
@@ -72,7 +79,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .image-left {
@@ -85,7 +92,7 @@ export default defineComponent({
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -147,8 +154,8 @@ export default defineComponent({
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.cta-button:hover {
-  background-color: #a36444;
+.button:hover {
+  background-color: #5a2e18;
 }
 
 .signin {
