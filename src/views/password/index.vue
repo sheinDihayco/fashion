@@ -32,6 +32,7 @@
                 </div>
                 <i class="bi bi-eye-slash toggle-password"></i>
               </div>
+
               <!-- New Password Input -->
               <div class="mb-4">
                 <label for="new-password" class="form-label"
@@ -53,6 +54,13 @@
               <button type="submit" class="btn btn-primary w-100 my-4">
                 Create New Password
               </button>
+              <!-- Sign Up Link -->
+              <p class="text-center mt-4">
+                Complete Your Profile!
+                <a :button="true" @click="profile()" class="profile-link"
+                  >Profile</a
+                >
+              </p>
             </form>
           </div>
         </div>
@@ -72,6 +80,9 @@ export default defineComponent({
     IonContent,
   },
   methods: {
+    async profile() {
+      this.$router.push('/profile');
+    },
     async back() {
       this.$router.push('/signin');
     },
@@ -81,6 +92,7 @@ export default defineComponent({
 
 <style scoped>
 .container {
+  padding: 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
@@ -112,22 +124,30 @@ label {
 .toggle-password {
   position: absolute;
   right: 50px;
-  top: 45%;
+  top: 41%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #010101;
-  display: block;
+  position: fixed;
 }
 .toggle-new-password {
   position: absolute;
   right: 50px;
-  top: 59%;
+  top: 54%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #010101;
-  display: block;
+  position: fixed;
 }
-
+.profile-link {
+  color: #6c3f24;
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration: underline;
+}
+.profile-link:hover {
+  text-decoration: underline;
+}
 /* Button */
 .btn-primary {
   background-color: #6c3f24;

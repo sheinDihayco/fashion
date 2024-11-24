@@ -28,6 +28,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/password/index.vue'),
   },
   {
+    path: '/profile',
+    name: 'profile',
+    component: () => import('../views/profile/index.vue'),
+  },
+  {
     path: '/tabs/',
     component: footer,
     children: [
