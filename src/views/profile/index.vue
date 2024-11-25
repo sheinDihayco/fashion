@@ -13,10 +13,7 @@
               Don't worry, only you can see your personal data.No one else will
               be able to see it.
             </p>
-            <!-- <div class="profile-pic">
-              <i class="fa-solid fa-user-circle fa-3x"></i>
-              
-            </div>-->
+
             <div class="user mb-3">
               <i class="fa-solid fa-user"></i>
               <button class="edit-icon">
@@ -35,24 +32,35 @@
                   required
                 />
               </div>
-              <!-- Name Input -->
+              <!-- Contact Input -->
               <div class="mb-3">
                 <label class="form-label">Enter Phone Number</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="John Doe"
-                  required
-                />
+                <div class="form-control d-flex align-items-center">
+                  <!-- Country Code Dropdown -->
+                  <select class="country-code" required>
+                    <option value="+1">+1</option>
+                    <option value="+63">+63</option>
+                  </select>
+                  <!-- Phone Number Input -->
+                  <input
+                    type="text"
+                    class="phone-input"
+                    placeholder="Phone number"
+                    required
+                  />
+                </div>
               </div>
+
               <!-- Name Input -->
               <div class="mb-3">
                 <label class="form-label">Gender</label>
-                <select class="form-control">
-                  <option value="">Select</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                </select>
+                <div class="dropdown-wrapper position-relative">
+                  <select class="form-select form-control gender" disabled>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
               </div>
 
               <!-- Submit Button -->
@@ -86,6 +94,57 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.form-control {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+}
+
+.country-code {
+  width: 70px;
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.phone-input {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding-left: 5px;
+}
+@media (max-width: 576px) {
+  .country-code {
+    width: 60px;
+  }
+
+  .phone-input {
+    font-size: 0.9rem;
+  }
+  .gender .option {
+    width: 60px;
+  }
+}
+.form-control input,
+.form-control select {
+  border-radius: 50px;
+}
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-icon {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6c757d;
+}
+
 .edit-icon {
   position: absolute;
   bottom: 0;
@@ -118,11 +177,6 @@ h2 {
   color: #3e2723;
   font-size: 1.8rem;
 }
-.welcome-text {
-  color: #6d4c41;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-}
 
 label {
   font-size: 18px;
@@ -139,26 +193,7 @@ label {
   padding: 0.8rem;
   border: 1px solid #d7ccc8;
 }
-.toggle-password {
-  position: absolute;
-  right: 50px;
-  top: 45%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #010101;
-  display: block;
-}
-.toggle-new-password {
-  position: absolute;
-  right: 50px;
-  top: 59%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #010101;
-  display: block;
-}
 
-/* Button */
 .btn-primary {
   background-color: #6c3f24;
   border: none;
@@ -171,14 +206,7 @@ label {
 .btn-primary:hover {
   background-color: #5a3320;
 }
-.button {
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  margin-top: -150%;
-  margin-right: 320px;
-}
+
 .user {
   position: relative;
   display: inline-block;
@@ -200,7 +228,6 @@ label {
   color: #757575;
 }
 
-/* Responsive Design */
 @media (max-width: 450px) {
   .form-container {
     padding: 1rem;

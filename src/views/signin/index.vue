@@ -254,7 +254,6 @@ h2 {
   color: #6d4c41;
 }
 
-/* Responsive Design */
 @media (max-width: 450px) {
   .form-container {
     padding: 1.5rem;

@@ -155,7 +155,6 @@ label {
 .profile-link:hover {
   text-decoration: underline;
 }
-/* Button */
 .btn-primary {
   background-color: #6c3f24;
   border: none;
@@ -176,7 +175,6 @@ label {
   margin-top: -150%;
   margin-right: 320px;
 }
-/* Responsive Design */
 @media (max-width: 450px) {
   .form-container {
     padding: 1rem;

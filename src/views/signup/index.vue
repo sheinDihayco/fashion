@@ -161,11 +161,11 @@ h2 {
   text-decoration: underline;
 }
 input[type='checkbox'] {
-  appearance: none; /* Remove default checkbox style */
+  appearance: none;
   width: 25px;
   height: 25px;
-  border: 2px solid #6c3f24; /* Default border color */
-  border-radius: 4px; /* Optional: rounded corners */
+  border: 2px solid #6c3f24;
+  border-radius: 4px;
   cursor: pointer;
   margin-right: 10px;
 }
