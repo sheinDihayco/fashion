@@ -5,7 +5,10 @@
         <button class="button" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <div class="container" style="font-family: 'Arial', sans-serif">
+        <div
+          class="container mt-4 p-4"
+          style="font-family: 'Arial', sans-serif"
+        >
           <div class="form-container mx-auto">
             <!-- Title -->
             <h2 class="text-center fw-bold">New Password</h2>
@@ -85,9 +88,9 @@ export default defineComponent({
 
 <style scoped>
 .container {
-  padding: 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
+  display: fixed;
 }
 h2 {
   color: #3e2723;

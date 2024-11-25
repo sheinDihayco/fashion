@@ -157,7 +157,6 @@ h2 {
 .sign-up-link {
   color: #6c3f24;
   font-weight: 600;
-  text-decoration: none;
   text-decoration: underline;
 }
 .forgot-password-link:hover,

@@ -5,7 +5,7 @@
         <button class="button" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <div class="container" style="font-family: 'Arial', sans-serif">
+        <div class="container mb-4 p-4">
           <div class="form-container mx-auto">
             <!-- Title -->
             <h2 class="text-center fw-bold">Complete Your Profile</h2>
@@ -67,6 +67,14 @@
               <button type="submit" class="btn btn-primary w-100 mt-2">
                 Complete Profile
               </button>
+
+              <!-- Location Display Prompt -->
+              <p class="text-center mt-4">
+                Would you like to display your location?
+                <a :button="true" @click="location()" class="sign-up-link">
+                  View Location
+                </a>
+              </p>
             </form>
           </div>
         </div>
@@ -89,11 +97,23 @@ export default defineComponent({
     async back() {
       this.$router.push('/signin');
     },
+    async location() {
+      this.$router.push('/location');
+    },
   },
 });
 </script>
 
 <style scoped>
+.sign-up-link {
+  color: #6c3f24;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.forgot-password-link:hover,
+.sign-up-link:hover {
+  text-decoration: underline;
+}
 .form-control {
   display: flex;
   align-items: center;
@@ -168,10 +188,10 @@ export default defineComponent({
   background-color: #5a3320;
 }
 .container {
-  padding: 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  margin-top: 100px;
+  display: fixed;
+  margin-top: 200px;
 }
 h2 {
   color: #3e2723;
