@@ -5,57 +5,67 @@
         <button class="button" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <div class="container" style="font-family: 'Arial', sans-serif">
+        <div class="container">
           <div class="form-container mx-auto">
             <!-- Title -->
-            <h2 class="text-center fw-bold">New Password</h2>
+            <h2 class="text-center fw-bold">Verify Code</h2>
             <p class="text-center welcome-text">
-              Your new password must be different from previously used
-              passwords.
+              Please enter the code we just sent to email
+              <span class="email-sample"> example@gmail.com</span>
             </p>
 
             <!-- Form -->
             <form>
-              <!-- Current Password Input -->
-              <div class="mb-4">
-                <label class="form-label">Curernt Password</label>
-                <div class="d-flex align-items-center">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    placeholder="****************"
-                    required
-                  />
-                  <div class="toggle-password-wrapper">
-                    <button type="button" class="toggle-password">
-                      <i class="bi bi-eye-slash"></i>
-                    </button>
+              <div class="OTP gap-2 p-4">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="number"
+                      class="form-control text-center"
+                      placeholder="-"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="number"
+                      class="form-control text-center"
+                      placeholder="-"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="number"
+                      class="form-control text-center"
+                      placeholder="-"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="number"
+                      class="form-control text-center"
+                      placeholder="-"
+                      required
+                    />
                   </div>
                 </div>
               </div>
 
-              <!-- New Password Input -->
-              <div class="mb-4">
-                <label class="form-label"> New Password</label>
-                <div class="d-flex align-items-center">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    placeholder="****************"
-                    required
-                  />
-                  <div class="toggle-password-wrapper">
-                    <button type="button" class="toggle-password">
-                      <i class="bi bi-eye-slash"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <!-- Sign Up Link -->
+              <p class="text-center">Didn't recieve OTP?</p>
+              <a :button="true" class="profile-link"> Resend Code</a>
+
               <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary w-100 my-4">
-                Create New Password
+              <button type="submit" class="btn btn-primary w-100 mt-4">
+                Verify
               </button>
             </form>
           </div>
@@ -70,7 +80,7 @@ import { defineComponent } from 'vue';
 import { IonPage, IonContent } from '@ionic/vue';
 
 export default defineComponent({
-  name: 'NewPasswordScreen',
+  name: 'verifyScreen',
   components: {
     IonPage,
     IonContent,
@@ -113,24 +123,6 @@ label {
   box-sizing: border-box;
 }
 
-.toggle-password-wrapper {
-  margin-left: -40px;
-  display: flex;
-  align-items: center;
-}
-
-.toggle-password {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #6c757d;
-  font-size: 1.2rem;
-}
-
-.toggle-password:focus {
-  outline: none;
-}
-
 .input-group-text {
   background: none;
   border: none;
@@ -141,6 +133,9 @@ label {
   font-weight: 600;
   text-decoration: none;
   text-decoration: underline;
+  display: block;
+  text-align: center;
+  margin-top: -15px;
 }
 .profile-link:hover {
   text-decoration: underline;
@@ -164,6 +159,15 @@ label {
   position: absolute;
   margin-top: -150%;
   margin-right: 320px;
+}
+.email-sample {
+  color: #6c3f24;
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration: underline;
+}
+.OTP {
+  display: inline-flex;
 }
 @media (max-width: 450px) {
   .form-container {

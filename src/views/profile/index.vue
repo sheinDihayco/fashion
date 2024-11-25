@@ -87,7 +87,7 @@ export default defineComponent({
   },
   methods: {
     async back() {
-      this.$router.push('/password');
+      this.$router.push('/signin');
     },
   },
 });
@@ -227,7 +227,14 @@ label {
   font-size: 80px;
   color: #757575;
 }
-
+.button {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-top: -150%;
+  margin-right: 320px;
+}
 @media (max-width: 450px) {
   .form-container {
     padding: 1rem;

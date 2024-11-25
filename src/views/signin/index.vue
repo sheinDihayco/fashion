@@ -51,7 +51,11 @@
               </div>
 
               <!-- Sign In Button -->
-              <button type="submit" class="btn btn-primary w-100 my-4">
+              <button
+                :button="true"
+                @click="profile()"
+                class="btn btn-primary w-100 my-4"
+              >
                 Sign In
               </button>
 
@@ -119,6 +123,9 @@ export default defineComponent({
     },
     async password() {
       this.$router.push('password');
+    },
+    async profile() {
+      this.$router.push('/profile');
     },
   },
 });

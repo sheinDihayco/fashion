@@ -58,7 +58,12 @@
               </div>
 
               <!-- Sign In Button -->
-              <button type="submit" class="btn btn-primary w-100 my-4">
+              <button
+                type="submit"
+                class="btn btn-primary w-100 my-4"
+                :button="true"
+                @click="verify()"
+              >
                 Sign In
               </button>
 
@@ -123,6 +128,9 @@ export default defineComponent({
   methods: {
     async signin() {
       this.$router.push('signin');
+    },
+    async verify() {
+      this.$router.push('verify');
     },
   },
 });

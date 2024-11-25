@@ -33,6 +33,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/profile/index.vue'),
   },
   {
+    path: '/verify',
+    name: 'verify',
+    component: () => import('../views/verify/index.vue'),
+  },
+  {
     path: '/tabs/',
     component: footer,
     children: [
