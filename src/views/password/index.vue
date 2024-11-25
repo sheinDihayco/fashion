@@ -18,38 +18,41 @@
             <form>
               <!-- Current Password Input -->
               <div class="mb-4">
-                <label for="current-password" class="form-label"
-                  >Current Password</label
-                >
-                <div class="input-group">
+                <label class="form-label">Curernt Password</label>
+                <div class="d-flex align-items-center">
                   <input
                     type="password"
                     class="form-control"
-                    id="current-password"
+                    id="password"
                     placeholder="****************"
                     required
                   />
+                  <div class="toggle-password-wrapper">
+                    <button type="button" class="toggle-password">
+                      <i class="bi bi-eye-slash"></i>
+                    </button>
+                  </div>
                 </div>
-                <i class="bi bi-eye-slash toggle-password"></i>
               </div>
 
               <!-- New Password Input -->
               <div class="mb-4">
-                <label for="new-password" class="form-label"
-                  >New Password</label
-                >
-                <div class="input-group">
+                <label class="form-label"> New Password</label>
+                <div class="d-flex align-items-center">
                   <input
                     type="password"
                     class="form-control"
-                    id="new-password"
+                    id="password"
                     placeholder="****************"
                     required
                   />
+                  <div class="toggle-password-wrapper">
+                    <button type="button" class="toggle-password">
+                      <i class="bi bi-eye-slash"></i>
+                    </button>
+                  </div>
                 </div>
-                <i class="bi bi-eye-slash toggle-new-password"></i>
               </div>
-
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary w-100 my-4">
                 Create New Password
@@ -112,32 +115,36 @@ label {
   display: flex;
   align-items: center;
 }
-.form-label {
-  font-size: 0.9rem;
-  color: #6d4c41;
-}
 .form-control {
   border-radius: 50px;
-  padding: 0.8rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #d7ccc8;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.toggle-password-wrapper {
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+}
+
 .toggle-password {
-  position: absolute;
-  right: 50px;
-  top: 41%;
-  transform: translateY(-50%);
+  background: none;
+  border: none;
   cursor: pointer;
-  color: #010101;
-  position: fixed;
+  color: #6c757d;
+  font-size: 1.2rem;
 }
-.toggle-new-password {
-  position: absolute;
-  right: 50px;
-  top: 54%;
-  transform: translateY(-50%);
+
+.toggle-password:focus {
+  outline: none;
+}
+
+.input-group-text {
+  background: none;
+  border: none;
   cursor: pointer;
-  color: #010101;
-  position: fixed;
 }
 .profile-link {
   color: #6c3f24;

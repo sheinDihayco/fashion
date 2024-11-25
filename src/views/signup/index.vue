@@ -35,7 +35,7 @@
               <!-- Password Input -->
               <div class="mb-4">
                 <label class="form-label">Password</label>
-                <div class="input-group">
+                <div class="d-flex align-items-center">
                   <input
                     type="password"
                     class="form-control"
@@ -43,8 +43,12 @@
                     placeholder="****************"
                     required
                   />
+                  <div class="toggle-password-wrapper">
+                    <button type="button" class="toggle-password">
+                      <i class="bi bi-eye-slash"></i>
+                    </button>
+                  </div>
                 </div>
-                <i class="bi bi-eye-slash toggle-password"></i>
               </div>
               <div class="check">
                 <label>
@@ -196,23 +200,30 @@ label {
 }
 .form-control {
   border-radius: 50px;
-  padding: 0.8rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #d7ccc8;
+  width: 100%;
+  box-sizing: border-box;
 }
-.input-group-text {
+
+.toggle-password-wrapper {
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
   background: none;
   border: none;
   cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
 }
-.toggle-password {
-  position: absolute;
-  right: 50px;
-  top: 56%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #010101;
-  display: block;
+
+.toggle-password:focus {
+  outline: none;
 }
+
 /* Button */
 .btn-primary {
   background-color: #6c3f24;

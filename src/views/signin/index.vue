@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <section class="vh-100 d-flex align-items-center justify-content-center">
-        <div class="container" style="font-family: 'Arial', sans-serif">
+        <div class="container">
           <div class="form-container mx-auto">
             <!-- Title -->
             <h2 class="text-center fw-bold">Sign In</h2>
@@ -11,7 +11,7 @@
             </p>
 
             <!-- Form -->
-            <form>
+            <form class="container">
               <!-- Email Input -->
               <div class="mb-4">
                 <label class="form-label">Email</label>
@@ -22,10 +22,9 @@
                   required
                 />
               </div>
-              <!-- Password Input -->
               <div class="mb-4">
                 <label class="form-label">Password</label>
-                <div class="input-group">
+                <div class="d-flex align-items-center">
                   <input
                     type="password"
                     class="form-control"
@@ -33,8 +32,12 @@
                     placeholder="****************"
                     required
                   />
+                  <div class="toggle-password-wrapper">
+                    <button type="button" class="toggle-password">
+                      <i class="bi bi-eye-slash"></i>
+                    </button>
+                  </div>
                 </div>
-                <i class="bi bi-eye-slash toggle-password"></i>
               </div>
 
               <!-- Forgot Password Link -->
@@ -122,6 +125,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.conatainer {
+  padding: 30px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
 .brand-name {
   font-size: 1.5rem;
   font-weight: 600;
@@ -150,31 +158,38 @@ h2 {
   text-decoration: underline;
 }
 
-/* Form Elements */
-.form-label {
-  font-size: 0.9rem;
-  color: #6d4c41;
-}
 .form-control {
   border-radius: 50px;
-  padding: 0.8rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #d7ccc8;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.toggle-password-wrapper {
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.toggle-password:focus {
+  outline: none;
+}
+
 .input-group-text {
   background: none;
   border: none;
   cursor: pointer;
 }
-.toggle-password {
-  position: absolute;
-  right: 50px;
-  top: 45%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #010101;
-  display: block;
-}
-/* Button */
+
 .btn-primary {
   background-color: #6c3f24;
   border: none;
