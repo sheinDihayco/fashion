@@ -8,7 +8,7 @@
         <div class="container mb-4 p-4">
           <div class="form-container mx-auto">
             <h2 class="text-center fw-bold">Complete Your Profile</h2>
-            <p class="text-center welcome-text">
+            <p class="text-center welcome-text p-4">
               Don't worry, only you can see your personal data.No one else will
               be able to see it.
             </p>
@@ -160,7 +160,7 @@ export default defineComponent({
   margin-bottom: 2rem;
   font-size: 1rem;
   position: absolute;
-  top: 140px;
+  top: 120px;
   left: 5px;
   padding: 5px;
 }

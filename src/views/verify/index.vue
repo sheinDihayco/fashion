@@ -13,7 +13,7 @@
               <span class="email-sample"> example@gmail.com</span>
             </p>
 
-            <form class="container">
+            <form class="form">
               <div class="OTP gap-2 mb-4">
                 <div class="mb-4">
                   <div class="d-flex align-items-center">
@@ -115,6 +115,12 @@ label {
   margin-left: 8px;
   display: flex;
   align-items: center;
+}
+.form {
+  position: absolute;
+  top: 220px;
+  left: 5px;
+  padding: 1rem;
 }
 .form-control {
   border-radius: 50px;
