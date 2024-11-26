@@ -163,9 +163,9 @@ export default defineComponent({
 }
 
 .signin-link {
-  color: #623a24;
+  color: #6c3f24;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
   text-decoration: underline;
 }
 

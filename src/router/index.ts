@@ -5,7 +5,12 @@ import footer from '../views/footer.vue';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/splash',
+  },
+  {
+    path: '/splash',
+    name: 'splash',
+    component: () => import('@/views/splash/index.vue'),
   },
   {
     path: '/welcome',
