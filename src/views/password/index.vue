@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <section class="vh-100 d-flex align-items-center justify-content-center">
-        <button class="button" :button="true" @click="back()">
+        <button class="button mt-4 mb-4 mx-2" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
         <div
@@ -10,16 +10,13 @@
           style="font-family: 'Arial', sans-serif"
         >
           <div class="form-container mx-auto">
-            <!-- Title -->
             <h2 class="text-center fw-bold">New Password</h2>
             <p class="text-center welcome-text">
               Your new password must be different from previously used
               passwords.
             </p>
 
-            <!-- Form -->
             <form>
-              <!-- Current Password Input -->
               <div class="mb-4">
                 <label class="form-label">Curernt Password</label>
                 <div class="d-flex align-items-center">
@@ -38,7 +35,6 @@
                 </div>
               </div>
 
-              <!-- New Password Input -->
               <div class="mb-4">
                 <label class="form-label"> New Password</label>
                 <div class="d-flex align-items-center">
@@ -56,7 +52,6 @@
                   </div>
                 </div>
               </div>
-              <!-- Submit Button -->
               <button type="submit" class="btn btn-primary w-100 my-4">
                 Create New Password
               </button>
@@ -95,11 +90,16 @@ export default defineComponent({
 h2 {
   color: #3e2723;
   font-size: 1.8rem;
+  position: absolute;
+  top: 100px;
+  left: 105px;
 }
 .welcome-text {
-  color: #6d4c41;
   margin-bottom: 2rem;
   font-size: 1rem;
+  position: absolute;
+  top: 145px;
+  left: 2px;
 }
 
 label {
@@ -162,12 +162,17 @@ label {
 }
 .button {
   border-radius: 50px;
+  border-color: #6c757d;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
   position: absolute;
-  margin-top: -150%;
-  margin-right: 320px;
+  top: 10px;
+  left: 10px;
 }
+
 @media (max-width: 450px) {
   .form-container {
     padding: 1rem;

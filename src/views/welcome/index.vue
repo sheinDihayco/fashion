@@ -5,7 +5,6 @@
         <div class="container" style="font-family: 'Arial', sans-serif">
           <div class="form-container mx-auto"></div>
           <div class="welcome">
-            <!-- Image Section -->
             <div class="image-grid">
               <div class="image-left">
                 <img
@@ -23,7 +22,6 @@
                 <img class="circle-image" src="../../image/image.png" alt="" />
               </div>
             </div>
-            <!-- Text Section -->
             <div class="content">
               <h1 class="title">
                 The <span class="highlight">Fashion App</span> That Makes You

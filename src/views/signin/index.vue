@@ -4,15 +4,12 @@
       <section class="vh-100 d-flex align-items-center justify-content-center">
         <div class="container">
           <div class="form-container mx-auto">
-            <!-- Title -->
             <h2 class="text-center fw-bold">Sign In</h2>
             <p class="text-center welcome-text">
               Hi! Welcome back, you've been missed
             </p>
 
-            <!-- Form -->
             <form class="container">
-              <!-- Email Input -->
               <div class="mb-4">
                 <label class="form-label">Email</label>
                 <input
@@ -40,7 +37,6 @@
                 </div>
               </div>
 
-              <!-- Forgot Password Link -->
               <div class="text-end">
                 <a
                   :button="true"
@@ -50,7 +46,6 @@
                 >
               </div>
 
-              <!-- Sign In Button -->
               <button
                 :button="true"
                 @click="profile()"
@@ -59,14 +54,11 @@
                 Sign In
               </button>
 
-              <!-- Divider -->
               <div class="divider my-3">
                 <span>Or sign in with</span>
               </div>
 
-              <!-- Social Buttons -->
               <div class="d-flex justify-content-center gap-3">
-                <!-- Apple Button -->
                 <button
                   type="button"
                   class="btn btn-outline-secondary rounded-circle btn-apple"
@@ -74,7 +66,6 @@
                   <i class="fab fa-apple"></i>
                 </button>
 
-                <!-- Google Button -->
                 <button
                   type="button"
                   class="btn btn-outline-secondary rounded-circle btn-google"
@@ -82,7 +73,6 @@
                   <i class="fab fa-google"></i>
                 </button>
 
-                <!-- Facebook Button -->
                 <button
                   type="button"
                   class="btn btn-outline-secondary rounded-circle btn-facebook"
@@ -91,7 +81,6 @@
                 </button>
               </div>
 
-              <!-- Sign Up Link -->
               <p class="text-center mt-4">
                 Don't have an account?
                 <a :button="true" @click="signup()" class="sign-up-link"
@@ -149,7 +138,6 @@ h2 {
   font-size: 1.8rem;
 }
 .welcome-text {
-  color: #6d4c41;
   margin-bottom: 2rem;
   font-size: 1rem;
 }

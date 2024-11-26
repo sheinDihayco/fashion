@@ -43,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/location/index.vue'),
   },
   {
+    path: '/manual-location',
+    name: 'manual-location',
+    component: () => import('../views/manual-location/index.vue'),
+  },
+  {
     path: '/tabs/',
     component: footer,
     children: [

@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <section class="vh-100 d-flex align-items-center justify-content-center">
-        <button class="button" :button="true" @click="back()">
+        <button class="button mb-4 mt--4 mx-2" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
 
@@ -15,7 +15,6 @@
           </div>
 
           <div class="form-container mx-auto">
-            <!-- Title -->
             <h2 class="text-center fw-bold mt-4 mb-3">
               What is Your Location?
             </h2>
@@ -23,11 +22,14 @@
               We need to know your location in order to suggest nearby services.
             </p>
 
-            <!-- Submit Button -->
             <button type="submit" class="btn btn-primary w-100 mt-4 mb-4">
               Allow Location Access
             </button>
-            <p class="location mt-3">Enter Location Manually</p>
+            <p class="location mt-3">
+              <a :button="true" @click="manualLocation()">
+                Enter Location Manually</a
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -48,6 +50,9 @@ export default defineComponent({
   methods: {
     async back() {
       this.$router.push('/signin');
+    },
+    async manualLocation() {
+      this.$router.push('/manual-location');
     },
   },
 });
@@ -102,10 +107,14 @@ h2 {
 }
 .button {
   border-radius: 50px;
+  border-color: #6c757d;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
   position: absolute;
-  margin-top: -150%;
-  margin-right: 320px;
+  top: 30px;
+  left: 10px;
 }
 </style>

@@ -2,12 +2,11 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <section class="vh-100 d-flex align-items-center justify-content-center">
-        <button class="button" :button="true" @click="back()">
+        <button class="button mb-4 mt-4 mx-2" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
         <div class="container mb-4 p-4">
           <div class="form-container mx-auto">
-            <!-- Title -->
             <h2 class="text-center fw-bold">Complete Your Profile</h2>
             <p class="text-center welcome-text">
               Don't worry, only you can see your personal data.No one else will
@@ -22,7 +21,6 @@
             </div>
 
             <form>
-              <!-- Name Input -->
               <div class="mb-3">
                 <label class="form-label">Name</label>
                 <input
@@ -32,16 +30,13 @@
                   required
                 />
               </div>
-              <!-- Contact Input -->
               <div class="mb-3">
                 <label class="form-label">Enter Phone Number</label>
                 <div class="form-control d-flex align-items-center">
-                  <!-- Country Code Dropdown -->
                   <select class="country-code" required>
                     <option value="+1">+1</option>
                     <option value="+63">+63</option>
                   </select>
-                  <!-- Phone Number Input -->
                   <input
                     type="text"
                     class="phone-input"
@@ -51,11 +46,10 @@
                 </div>
               </div>
 
-              <!-- Name Input -->
               <div class="mb-3">
                 <label class="form-label">Gender</label>
                 <div class="dropdown-wrapper position-relative">
-                  <select class="form-select form-control gender" disabled>
+                  <select class="form-select form-control gender">
                     <option value="">Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -63,12 +57,10 @@
                 </div>
               </div>
 
-              <!-- Submit Button -->
               <button type="submit" class="btn btn-primary w-100 mt-2">
                 Complete Profile
               </button>
 
-              <!-- Location Display Prompt -->
               <p class="text-center mt-4">
                 Would you like to display your location?
                 <a :button="true" @click="location()" class="sign-up-link">
@@ -164,7 +156,14 @@ export default defineComponent({
   pointer-events: none;
   color: #6c757d;
 }
-
+.welcome-text {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  position: absolute;
+  top: 140px;
+  left: 5px;
+  padding: 5px;
+}
 .edit-icon {
   position: absolute;
   bottom: 0;
@@ -193,9 +192,13 @@ export default defineComponent({
   display: fixed;
   margin-top: 200px;
 }
+
 h2 {
   color: #3e2723;
   font-size: 1.8rem;
+  position: absolute;
+  top: 100px;
+  left: 60px;
 }
 
 label {
@@ -241,6 +244,7 @@ label {
   justify-content: center;
   background-color: #dadada;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .user {
@@ -249,15 +253,21 @@ label {
 }
 .button {
   border-radius: 50px;
+  border-color: #6c757d;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
   position: absolute;
-  margin-top: -150%;
-  margin-right: 320px;
+  top: 10px;
+  left: 10px;
 }
+
 @media (max-width: 450px) {
   .form-container {
     padding: 1rem;
+    margin: auto;
   }
 }
 </style>

@@ -153,7 +153,6 @@ h2 {
   font-size: 1.8rem;
 }
 .welcome-text {
-  color: #6d4c41;
   margin-bottom: 2rem;
   font-size: 1rem;
 }

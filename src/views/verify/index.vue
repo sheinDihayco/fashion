@@ -2,21 +2,19 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <section class="vh-100 d-flex align-items-center justify-content-center">
-        <button class="button" :button="true" @click="back()">
+        <button class="button mt-4 mb-4 mx-2" :button="true" @click="back()">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
         <div class="container">
           <div class="form-container mx-auto">
-            <!-- Title -->
             <h2 class="text-center fw-bold">Verify Code</h2>
             <p class="text-center welcome-text">
               Please enter the code we just sent to email
               <span class="email-sample"> example@gmail.com</span>
             </p>
 
-            <!-- Form -->
-            <form>
-              <div class="OTP gap-2 p-4">
+            <form class="container">
+              <div class="OTP gap-2 mb-4">
                 <div class="mb-4">
                   <div class="d-flex align-items-center">
                     <input
@@ -59,12 +57,10 @@
                 </div>
               </div>
 
-              <!-- Sign Up Link -->
               <p class="text-center">Didn't recieve OTP?</p>
               <a :button="true" class="profile-link"> Resend Code</a>
 
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary w-100 mt-4">
+              <button type="submit" class="btn btn-primary w-75 mt-4">
                 Verify
               </button>
             </form>
@@ -102,11 +98,16 @@ export default defineComponent({
 h2 {
   color: #3e2723;
   font-size: 1.8rem;
+  position: absolute;
+  top: 100px;
+  left: 130px;
 }
 .welcome-text {
-  color: #6d4c41;
   margin-bottom: 2rem;
   font-size: 1rem;
+  position: absolute;
+  top: 140px;
+  left: 5px;
 }
 
 label {
@@ -154,11 +155,15 @@ label {
 }
 .button {
   border-radius: 50px;
+  border-color: #6c757d;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
   position: absolute;
-  margin-top: -150%;
-  margin-right: 320px;
+  top: 10px;
+  left: 10px;
 }
 .email-sample {
   color: #6c3f24;
