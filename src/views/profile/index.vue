@@ -244,10 +244,7 @@ label {
   justify-content: center;
   background-color: #dadada;
   margin: 0 auto;
-  margin-top: 100px;
-}
-
-.user {
+  margin-top: 70px;
   font-size: 80px;
   color: #757575;
 }

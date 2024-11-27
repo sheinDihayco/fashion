@@ -247,7 +247,10 @@ h2 {
   padding: 0 1rem;
   color: #6d4c41;
 }
-
+.container {
+  font-family: 'Arial', sans-serif;
+  display: fixed;
+}
 @media (max-width: 450px) {
   .form-container {
     padding: 1.5rem;

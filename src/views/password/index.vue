@@ -16,7 +16,7 @@
               passwords.
             </p>
 
-            <form>
+            <form class="container">
               <div class="mb-4">
                 <label class="form-label">Curernt Password</label>
                 <div class="d-flex align-items-center">
@@ -83,23 +83,16 @@ export default defineComponent({
 
 <style scoped>
 .container {
-  text-align: center;
   font-family: 'Arial', sans-serif;
   display: fixed;
 }
 h2 {
   color: #3e2723;
   font-size: 1.8rem;
-  position: absolute;
-  top: 100px;
-  left: 105px;
 }
 .welcome-text {
   margin-bottom: 2rem;
   font-size: 1rem;
-  position: absolute;
-  top: 145px;
-  left: 2px;
 }
 
 label {

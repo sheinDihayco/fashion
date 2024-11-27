@@ -2,16 +2,6 @@
 	"appId": "io.ionic.starter",
 	"appName": "fashion",
 	"webDir": "dist",
-	"bundledWebRuntime": false,
-	"plugins": {
-		"SplashScreen": {
-			"launchShowDuration": 3000,
-			"launchAutoHide": true,
-			"backgroundColor": "#ffffff",
-			"androidSplashResourceName": "splash",
-			"showSpinner": false
-		}
-	},
 	"packageClassList": [
 		"AppPlugin",
 		"HapticsPlugin",
